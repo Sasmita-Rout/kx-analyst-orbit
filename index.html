@@ -615,67 +615,90 @@
       </div>
     </div>
 
-    <!-- ========== SLIDE 11 — Tickets Resolved: Sasmita Rout ========== -->
+    <!-- ========== SLIDE 12 — Tickets: Sasmita Rout ========== -->
     <div class="slide" data-slide-id="slide-12">
-      <h2 class="slide-headline">Tickets Resolved — <span class="presenter-name-tag">Sasmita Rout</span></h2>
+      <h2 class="slide-headline">Tickets — <span class="presenter-name-tag">Sasmita Rout</span></h2>
       <div class="tickets-grid">
         <div class="ticket-card">
           <div class="ticket-card-header">
             <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXI-1206</span>
-              <span class="ticket-title">Handle File Paths Containing Spaces</span>
+              <span class="ticket-id-badge">KXP-7948</span>
+              <span class="ticket-title">Make the branch build-common used in package.json dynamic</span>
             </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge medium">🟡 Medium</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Jun 9 – Jun 15</div>
-          <ul class="ticket-list">
-            <li>The testing and source file tooling previously broke whenever a file path contained a space in it.</li>
-            <li>This meant certain valid file names or folder structures couldn't be used at all with the framework.</li>
-            <li>I fixed the path-handling logic so spaces are now processed correctly instead of causing failures.</li>
-            <li>Removes a silent restriction that could affect anyone naming files naturally.</li>
-          </ul>
-        </div>
-
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXP-1239</span>
-              <span class="ticket-title">Support Multiple Test Paths (axqcumber)</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
+            <div class="ticket-badges">
               <span class="priority-badge medium-high">🟠 Medium-High</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+              <span class="ticket-status-badge in-progress">🟠 In Progress</span>
             </div>
           </div>
-          <div class="ticket-date-line">Jun 16 – Jul 8</div>
+          <div class="ticket-date-line">Aug 26 – Aug 28</div>
           <ul class="ticket-list">
-            <li>Previously, the coverage analysis tool could only run against one test file at a time.</li>
-            <li>For larger projects with many test files, this meant running the tool repeatedly instead of once.</li>
-            <li>I extended the framework so it can accept and process multiple test files in a single coverage run.</li>
-            <li>Directly improves efficiency for anyone testing larger codebases.</li>
+            <li>Motivation: the build-common branch reference in package.json was hardcoded, requiring a manual edit every time the branch changed.</li>
+            <li>Added a mechanism allowing the branch to be swapped at run-time via a variable, with no code change or commit required.</li>
+            <li>Tested and confirmed the workflow is working end-to-end.</li>
+            <li>Assigned by Gerard.</li>
           </ul>
         </div>
 
         <div class="ticket-card">
           <div class="ticket-card-header">
             <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXP-1207</span>
-              <span class="ticket-title">Fix Coverage Instrumentation for Anonymous Functions Inside Named Functions (axcoverage)</span>
+              <span class="ticket-id-badge">KXP-7946</span>
+              <span class="ticket-title">Update build-common</span>
             </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge high">🔴 High</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge in-progress">🟠 Dev-Complete</span>
             </div>
           </div>
-          <div class="ticket-date-line">Jul 1 – Jul 3 · found independently while working on KXP-1239</div>
+          <div class="ticket-date-line">Aug 19 – Aug 25</div>
           <ul class="ticket-list">
-            <li>While working on KXP-1239, I noticed coverage results were incorrect for anonymous functions defined inside named functions.</li>
-            <li>This was a long-standing bug that had gone unnoticed until I was working closely with the coverage internals.</li>
-            <li>I identified the root cause and fixed the instrumentation so these cases are now measured correctly.</li>
-            <li>This wasn't part of my original assignment — I found and fixed it proactively.</li>
+            <li>Routine dependency update to keep build-common current across the Analyst group.</li>
+            <li>Verified the build passes with the updated dependency.</li>
+            <li>Dev-complete, awaiting merge.</li>
+            <li>Assigned by Gerard.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7967</span>
+              <span class="ticket-title">Update qcommon</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge in-progress">🟠 Dev-Complete</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Aug 18 – Aug 25</div>
+          <ul class="ticket-list">
+            <li>Same purpose as KXP-7946 — bringing qcommon in line as part of the sync effort.</li>
+            <li>Verified build passes with the update.</li>
+            <li>Dev-complete, awaiting merge.</li>
+            <li>Assigned by Gerard.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7571</span>
+              <span class="ticket-title">Sync main and release/1.6.0 branches for all repos within the Analyst group</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge in-progress">🟠 Dev-Complete, Pending Review</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jul 17 – Aug 12</div>
+          <ul class="ticket-list">
+            <li>Compared main and release/1.6.0 across the Analyst group and found 30+ repos out of sync, requiring git cherry-picking.</li>
+            <li>Created synchronization branches, cherry-picked required commits while preserving commit sequence, handled merge commits, empty cherry-picks, and conflicts.</li>
+            <li>Wrote an automated script to handle cherry-picking for changesets with 100+ changes, reducing manual effort on the largest, most error-prone syncs.</li>
+            <li>While re-verifying previously synced branches, found 3 additional out-of-sync repos — axqdoctools, axchartparser, plugins — resolved individually (two no-op, one MR closed after confirming zero net changes).</li>
+            <li>Also root-caused and fixed CI/CD build failures on qutil and qfs: corrupted source files, SSH auth issues, mismatched git refs, missing OS support in the shared CI template — extended CI to support RHEL 8/9/10 and Ubuntu 24.</li>
+            <li>34+ repositories were sanity-tested afterward to confirm the sync held.</li>
+            <li>Note: a massive task, not a quick one — requires a lot of review and testing.</li>
           </ul>
         </div>
 
@@ -685,24 +708,77 @@
               <span class="ticket-id-badge">KXI-52035</span>
               <span class="ticket-title">Errors in the qdate Library (axqdate)</span>
             </div>
-            <div style="display:flex;gap:6px;align-items:center;">
+            <div class="ticket-badges">
               <span class="priority-badge low">🟢 Low</span>
               <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
             </div>
           </div>
           <div class="ticket-date-line">Jul 8 – Jul 15</div>
           <ul class="ticket-list">
-            <li>Users were getting unexpected errors when working with certain time-based date patterns.</li>
-            <li>I traced the issue back to a missing safety check that had been removed in a 2020 code change.</li>
-            <li>I restored the missing check and added regression tests so this specific issue can't silently reappear.</li>
-            <li>Fixes a bug that had likely existed undetected for years.</li>
+            <li>Root cause: a safety check removed in a 2020 code change caused certain time-based date patterns to throw unexpected errors.</li>
+            <li>Restored the missing check and added regression tests covering the specific failing date-pattern cases.</li>
           </ul>
         </div>
 
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-1207</span>
+              <span class="ticket-title">Fix Coverage Instrumentation for Anonymous Functions Inside Named Functions (axcoverage)</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge high">🔴 High</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jul 1 – Jul 3</div>
+          <ul class="ticket-list">
+            <li>Root cause: instrumentation logic didn't recurse into anonymous functions nested inside named functions, so their execution was never tracked and coverage percentages were inaccurate.</li>
+            <li>Found independently while verifying KXP-1239 — not part of the original assigned scope.</li>
+            <li>Fixed by extending the instrumentation traversal to recurse into nested anonymous functions and verified against known test cases.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-1239</span>
+              <span class="ticket-title">Support Multiple Test Paths (axqcumber)</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium-high">🟠 Medium-High</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jun 16 – Jul 8</div>
+          <ul class="ticket-list">
+            <li>Root cause: the coverage framework only accepted a single file path argument, so testing multiple files meant running the tool separately each time.</li>
+            <li>Extended the framework to accept multiple paths in one call, aggregating results into a single combined report.</li>
+            <li>Verified that the combined output matched running the files individually.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXI-1206</span>
+              <span class="ticket-title">Handle File Paths Containing Spaces</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jun 9 – Jun 15</div>
+          <ul class="ticket-list">
+            <li>Root cause: path-parsing logic split on whitespace, assuming paths never contained spaces.</li>
+            <li>Fixed the logic to treat spaced paths as a single token instead of splitting incorrectly.</li>
+            <li>Verified against test cases with spaces in different positions.</li>
+          </ul>
+        </div>
       </div>
       <div class="ticket-highlight-strip">
-        📊 <strong>4 tickets resolved &amp; approved</strong>, June 9 – Jul 15 · Found and fixed a hidden bug (KXP-1207) while working on a separate ticket
-        <br><em style="color:#9CA3AF;">"Sasmita is picking up well" — Benjamin Jeffery, Senior Developer (via Kamala P.)</em>
+        4 tickets resolved &amp; approved (Jun 9 – Jul 15) + 3 in progress (Aug 18–28) + Repository Sync (Jul 17 – Aug 12, 50+ repos, 34+ sanity-tested, 3 newly found repos resolved, qutil/qfs CI fixed) — 'Sasmita is picking up well' — Benjamin Jeffery, Senior Developer
       </div>
       <button class="slide-attach-btn" title="Attach screenshot to this slide">📷 Attach Slide Screenshot</button>
       <div class="slide-image-container" style="display:none;">
@@ -713,30 +789,180 @@
       </div>
     </div>
 
-    <!-- ========== SLIDE 12 — Repository Synchronization (Sasmita's work) ========== -->
+    <!-- ========== SLIDE 13 — Tickets: Sharan Sanamani ========== -->
     <div class="slide" data-slide-id="slide-13">
-      <h2 class="slide-headline">Repository Synchronization — <span class="presenter-name-tag">Sasmita Rout</span></h2>
-      <p class="ticket-date-line" style="text-align:center;margin-bottom:6px;">Jul 17 – Aug 12</p>
-      <div class="reposync-hero">
-        <div class="reposync-stat">50+</div>
-        <div class="reposync-stat-label">Repositories Synchronized</div>
-      </div>
-      <ul class="reposync-list">
-        <li>Compared <code>main</code> and the release branch to identify commits missing from the release</li>
-        <li>Created synchronization branches, cherry-picked required commits while preserving commit sequence</li>
-        <li>Handled merge commits, empty cherry-picks, and merge conflicts where required</li>
-        <li><strong>Wrote an automated script to handle cherry-picking for changesets with more than 100 changes</strong> — cutting down manual work on the largest, most error-prone syncs</li>
-        <li><strong>20+ repositories sanity-tested afterward</strong> to confirm the sync actually took effect</li>
-        <li>Created Merge Requests for review</li>
-      </ul>
-      <p style="text-align:center;font-size:0.75rem;color:#9CA3AF;margin-top:10px;">📊 50+ repos synced · 20+ sanity-tested · Jul 17 – Aug 12</p>
-      <div class="skills-section">
-        <div class="skills-section-label">📚 SKILLS PICKED UP ALONG THE WAY</div>
-        <div class="skills-badge-row">
-          <span class="skill-badge">🐧 Linux</span>
-          <span class="skill-badge">🔧 Git (Advanced Workflows)</span>
-          <span class="skill-badge">🤖 Claude Code</span>
+      <h2 class="slide-headline">Tickets — <span class="presenter-name-tag">Sharan Sanamani</span></h2>
+      <div class="tickets-grid">
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7942</span>
+              <span class="ticket-title">Fix axqcumber tests on main</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge high">🔴 High</span>
+              <span class="ticket-status-badge mr-open">🟠 MR Open</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Aug 28 – Aug 31</div>
+          <ul class="ticket-list">
+            <li>Investigated 34 of 844 tests failing on main (not on release/1.6.0) — suspected a sync gap.</li>
+            <li>Traced the root cause to a one-line change in i.load calling an unsupported 4th argument, causing a cascading rank error across ~17–18 unrelated-looking failures.</li>
+            <li>Reverted the line; verified locally that failures dropped from 18/31 to 1/31.</li>
+            <li>Found and flagged a separate, unrelated bug in a new coverageBinOut feature (expects defFile/defLine columns that don't exist in output) — raised separately, out of scope for this ticket.</li>
+          </ul>
         </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7871</span>
+              <span class="ticket-title">Print line number for failing expect tests in terminal output</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge mr-open">🟠 MR Open</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Aug 14 – Aug 19</div>
+          <ul class="ticket-list">
+            <li>Root cause: .qu.stdout.test only printed line numbers alongside separate error text, so a plain expect/toMatch mismatch was silently skipped despite being correctly captured.</li>
+            <li>Fixed by decoupling the two; added test coverage for this module because it previously had no tests.</li>
+            <li>Verified end-to-end using the real qcumber engine against an actual failing test file.</li>
+            <li>Provided before/after screenshots and code to Gerard for cross-referencing.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-5283</span>
+              <span class="ticket-title">Fix .axpnull.arity for compositions and projections of compositions</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge mr-open">🟠 MR Open</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Aug 12 – Aug 14</div>
+          <ul class="ticket-list">
+            <li>Root cause: the projection branch assumed the underlying function was always a plain lambda; fixed by recursing via .axpnull.arity and adding a dedicated branch for raw compositions.</li>
+            <li>Added an arity.quke test file covering lambdas, primitives, projections, compositions, and projections of compositions.</li>
+            <li>Per Gerard's follow-up review, added 6 further edge-case tests — all manually verified.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">Build Repo</span>
+              <span class="ticket-title">Local Build Research</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge low">🟢 Low (exploratory)</span>
+              <span class="ticket-status-badge paused">⏸ Paused</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Aug 4 – Aug 7</div>
+          <ul class="ticket-list">
+            <li>Investigated running the Analyst Orbit build repo locally instead of on AWS to cut costs.</li>
+            <li>Found the real blocker: ax-libraries-cache has no compiled binaries for Ubuntu 22/24, despite targets.js claiming support.</li>
+            <li>Paused pending a decision — not abandoned, just correctly stopped before more time was wasted.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">CI Config</span>
+              <span class="ticket-title">CI Config for Docs Build (release/5.1.0)</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jul 17 – Aug 3</div>
+          <ul class="ticket-list">
+            <li>Added CI configuration to build documentation on the release/5.1.0 branch.</li>
+            <li>Closed after the docs pipeline was successfully configured and verified.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7600</span>
+              <span class="ticket-title">QCumber Console Width Configuration</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jun 25 – Jul 10</div>
+          <ul class="ticket-list">
+            <li>Added a -console command-line argument and increased the default console width to 250.</li>
+            <li>Improved terminal readability and reduced output truncation during test runs.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-1206</span>
+              <span class="ticket-title">Validate &amp; Error on Spaces in Test/Source Paths</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge medium">🟡 Medium</span>
+              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Jun 18 – Jun 22</div>
+          <ul class="ticket-list">
+            <li>Added validation to raise a clear error when test or source paths contain spaces.</li>
+            <li>Prevents ambiguous parsing and gives users immediately actionable feedback instead of silent failures.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">userguide</span>
+              <span class="ticket-title">SAML SSO Documentation Build (release/5.1.0)</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge neutral">⬜ N/A</span>
+              <span class="ticket-status-badge in-progress">🟠 Ongoing</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Dates: TBC</div>
+          <ul class="ticket-list">
+            <li>Iterative fixes: placeholder text, navigation, CI/Pages hosting, and an auto-generated reference page.</li>
+            <li>Under active review by Gerard.</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div class="ticket-id-title">
+              <span class="ticket-id-badge">KXP-7941</span>
+              <span class="ticket-title">Fix broken docs that rely on npm build commands</span>
+            </div>
+            <div class="ticket-badges">
+              <span class="priority-badge neutral">⬜ N/A</span>
+              <span class="ticket-status-badge in-progress">🟠 Nearly Complete</span>
+            </div>
+          </div>
+          <div class="ticket-date-line">Dates: TBC</div>
+          <ul class="ticket-list">
+            <li>Bulk of the work is already done.</li>
+            <li>Pending one final fix to pull in info from another repo before it can close.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ticket-highlight-strip">
+        3 tickets with open MRs (Aug 12–31) + 1 ongoing doc build + 1 nearly complete + earlier resolved items retained for context — proactively flagged an unrelated coverageBinOut bug while investigating KXP-7942 — assigned by Gerard, JIRA tracking improving going forward
       </div>
       <button class="slide-attach-btn" title="Attach screenshot to this slide">📷 Attach Slide Screenshot</button>
       <div class="slide-image-container" style="display:none;">
@@ -747,130 +973,15 @@
       </div>
     </div>
 
-    <!-- ========== SLIDE 13 — Tickets Resolved: Sharan Sanamani ========== -->
-    <div class="slide" data-slide-id="slide-14">
-      <h2 class="slide-headline">Tickets Resolved — <span class="presenter-name-tag">Sharan Sanamani</span></h2>
-      <div class="tickets-grid">
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXP-1206</span>
-              <span class="ticket-title">Validate &amp; Error on Spaces in Test/Source Paths</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge medium">🟡 Medium</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Jun 18 – Jun 22</div>
-          <ul class="ticket-list">
-            <li>Added validation that raises a clear error when test or source paths contain spaces</li>
-          </ul>
-        </div>
-
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXP-7600</span>
-              <span class="ticket-title">QCumber Console Width Configuration</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge low-medium">🟢 Low-Medium</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Jun 25 – Jul 10</div>
-          <ul class="ticket-list">
-            <li>Added a <code>-console</code> command-line argument, bumped default console width to 250</li>
-          </ul>
-        </div>
-
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">CI Config</span>
-              <span class="ticket-title">CI Config for Docs Build (release/5.1.0)</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge medium">🟠 Medium</span>
-              <span class="ticket-status-badge resolved">✅ Resolved &amp; Approved</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Jul 17 – Aug 3</div>
-          <ul class="ticket-list">
-            <li>Added CI configuration to build documentation on the release/5.1.0 branch</li>
-          </ul>
-        </div>
-
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">Build Repo</span>
-              <span class="ticket-title">Local Build Research</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge low">🟢 Low (exploratory)</span>
-              <span class="ticket-status-badge paused">⏸ Paused</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Aug 4 – Aug 7</div>
-          <ul class="ticket-list">
-            <li>Investigated running the Analyst Orbit build repo locally instead of on AWS, to cut costs</li>
-            <li>Found the real blocker: <code>ax-libraries-cache</code> has no compiled binaries for Ubuntu 22/24, despite <code>targets.js</code> claiming support</li>
-            <li>Paused pending a decision — not abandoned, just correctly stopped before wasting more time</li>
-          </ul>
-        </div>
-
-        <div class="ticket-card">
-          <div class="ticket-card-header">
-            <div class="ticket-id-title">
-              <span class="ticket-id-badge">KXP-5283</span>
-              <span class="ticket-title">Fix .axpnull.arity Incorrect Results</span>
-            </div>
-            <div style="display:flex;gap:6px;align-items:center;">
-              <span class="priority-badge high">🔴 High</span>
-              <span class="ticket-status-badge open">🔶 MR Open</span>
-            </div>
-          </div>
-          <div class="ticket-date-line">Aug 11 – Aug 12</div>
-          <ul class="ticket-list">
-            <li>Fixed <code>.axpnull.arity</code> returning incorrect results (e.g. <code>-2</code> instead of <code>2</code>) for a projection of a composition</li>
-            <li>Root cause: the projection branch assumed the underlying function was always a plain lambda</li>
-            <li>Added dedicated test file covering lambdas, primitives, projections, compositions, and projections of compositions</li>
-            <li>MR !33 open into main</li>
-          </ul>
-        </div>
-      </div>
-      <div class="ticket-highlight-strip">
-        📊 <strong>4 tickets resolved &amp; approved</strong>, 1 MR open, 1 paused pending direction — honest status across validation, tooling, docs, infrastructure, and a correctness bug fix
-      </div>
-      <div class="skills-section">
-        <div class="skills-section-label">📚 SKILLS PICKED UP ALONG THE WAY</div>
-        <div class="skills-badge-row">
-          <span class="skill-badge">✅ Linux Course</span>
-          <span class="skill-badge">✅ Claude Code 101</span>
-          <span class="skill-badge">✅ Claude Code Cowork</span>
-          <span class="skill-badge in-progress">🔄 Claude Code Agent Skills (50%)</span>
-        </div>
-      </div>
-      <button class="slide-attach-btn" title="Attach screenshot to this slide">📷 Attach Slide Screenshot</button>
-      <div class="slide-image-container" style="display:none;">
-        <div class="slide-image-frame">
-          <div class="slide-image-placeholder">Click or drop image for Slide 14</div>
-        </div>
-        <button class="remove-slide-image-btn">✕ Remove</button>
-      </div>
-    </div>
-
     <!-- ========== SLIDE 14 — Thank You & Q&A ========== -->
-    <div class="slide qa-slide" data-slide-id="slide-15">
+    <div class="slide qa-slide" data-slide-id="slide-14">
       <div class="title-glow"></div>
       <h1 class="qa-title">Thank You</h1>
       <p class="qa-sub">Questions?</p>
       <button class="slide-attach-btn" title="Attach screenshot to this slide">📷 Attach Slide Screenshot</button>
       <div class="slide-image-container" style="display:none;">
         <div class="slide-image-frame">
-          <div class="slide-image-placeholder">Click or drop image for Slide 15</div>
+          <div class="slide-image-placeholder">Click or drop image for Slide 14</div>
         </div>
         <button class="remove-slide-image-btn">✕ Remove</button>
       </div>
