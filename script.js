@@ -5,7 +5,7 @@
 
 const state = {
   currentSlide: 0,
-  totalSlides: 15,
+  totalSlides: 14,
   sidebarOpen: false,
   presentationMode: false,
   archLayersRevealed: 0,
@@ -307,7 +307,7 @@ function onSlideEnter(index) {
       card.classList.add('animate-in');
     });
   }
-  else if (index === 11) { // Slide 12 - Tickets Resolved: Sasmita
+  else if (index === 11) { // Slide 12 - Tickets: Sasmita
     const cards = activeSlide.querySelectorAll('.ticket-card');
     cards.forEach((card, i) => {
       card.style.animationDelay = `${i * 0.12}s`;
@@ -319,21 +319,7 @@ function onSlideEnter(index) {
       strip.classList.add('animate-in');
     }
   }
-  else if (index === 12) { // Slide 13 - Repository Synchronization
-    const stat = activeSlide.querySelector('.reposync-stat');
-    if (stat) stat.classList.add('animate-in');
-    const items = activeSlide.querySelectorAll('.reposync-list li');
-    items.forEach((item, i) => {
-      item.style.animationDelay = `${0.2 + i * 0.1}s`;
-      item.classList.add('animate-in');
-    });
-    const skillBadges = activeSlide.querySelectorAll('.skill-badge');
-    skillBadges.forEach((badge, i) => {
-      badge.style.animationDelay = `${0.8 + items.length * 0.1 + i * 0.1}s`;
-      badge.classList.add('animate-in');
-    });
-  }
-  else if (index === 13) { // Slide 14 - Tickets Resolved: Sharan
+  else if (index === 12) { // Slide 13 - Tickets: Sharan
     const cards = activeSlide.querySelectorAll('.ticket-card');
     cards.forEach((card, i) => {
       card.style.animationDelay = `${i * 0.12}s`;
@@ -344,11 +330,6 @@ function onSlideEnter(index) {
       strip.style.animationDelay = `${cards.length * 0.12 + 0.1}s`;
       strip.classList.add('animate-in');
     }
-    const skillBadges = activeSlide.querySelectorAll('.skill-badge');
-    skillBadges.forEach((badge, i) => {
-      badge.style.animationDelay = `${cards.length * 0.12 + 0.3 + i * 0.1}s`;
-      badge.classList.add('animate-in');
-    });
   }
 }
 
